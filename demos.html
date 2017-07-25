@@ -1,0 +1,599 @@
+﻿ <!DOCTYPE html>
+<html>
+<head>
+<title>Zfire CMS - Demos</title>
+
+<style>
+	﻿html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { 
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {	
+	background-color: #777777;
+	color: #FFFFFF;
+	font-family: sans-serif;
+	font-size: 80%;
+	margin: 0px;
+	padding: 0px;
+}
+
+header {
+	margin: 0.5em auto;
+	border: .2em solid #444444;
+	border-radius: 0.5em;
+	overflow: hidden;
+	width: 95%;
+	min-width: 22em;
+	background-color: #222222;
+	
+	
+/*
+	position: relative;
+	top: 0;
+	width: 90%;
+	z-index: 2;
+	padding: 0;
+	margin: 0px auto 0px auto;
+*/
+
+}
+
+nav {	
+	/*margin: 0 auto 0 auto;*/
+	float: right;
+	padding: 0;
+	font-size: 100%;
+	margin: 0.5em 0.5em 0 0;
+	
+}
+	
+nav ul {	
+	float: left;
+	padding: 0;
+	margin: 0.3em;
+	list-style-type: none;
+
+}
+	
+nav a {	
+	float: left;
+	width: 6em;
+	text-decoration: none;
+	color: white;
+	background-color: black;
+	padding: 0.2em 0.6em;
+	margin-left: 0.3em;
+	border: 3px solid #AAAAAA;
+	border-radius: 0.5em;
+	font-weight: bold;
+}
+	
+nav a:link {	color: #FFFFFF	;}
+nav a:visited {color: #DDDDDD;}
+nav a:hover {	background-color: #151515;}
+nav li {	display: inline;}
+
+main {
+	box-sizing: border-box;
+	width: 95%;
+	z-index: 1;
+	padding: 0;
+	background-color: #222222;
+	/*border: 3px solid #AAAAAA;*/
+	margin: 0 auto;
+}
+	
+p {	
+	padding: 0.5em  0.0em;
+	margin: 0px 10px 0px 10px;
+
+}
+	
+h2 {
+	padding: 0.5em;
+	font-weight: bold;
+	font-size: 150%;
+}
+
+section {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	clear: both;
+}
+
+div.column { 
+	display: block;
+	float: left;
+	border: 0;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0.805%;
+}
+
+div.column:first-child { 
+	margin-left: 0;
+}
+
+div.colsmall { 
+	width: 12.5%;
+	min-width: 11em;
+}
+
+div.colbig { 
+	width: 32.79%;
+	min-width: 22em;
+	padding: 0px;
+}
+
+div.col3 { 
+	width: 32.79%;
+	min-width: 22em;
+	padding: 0px;
+}
+
+div.col2 { 
+	width: 49.5925%;
+	min-width: 22em;
+	padding: 0px;
+}
+
+div.col1 { 
+	width: 100%;
+	min-width: 22em;
+	padding: 0px;
+}
+
+div.col3x2 { 
+	width: 66.395%;
+	min-width: 22em;
+	padding: 0px;
+}
+
+article { 
+	box-sizing: border-box;
+	color: #222222;
+	font-size: 1.25em;
+	width: 99.99%;
+	float: left;
+	padding: 0;
+	margin: 0 0 0.5em 0px;
+	border: .2em solid #444444;
+	border-radius: 0.5em;
+	overflow: hidden;
+	background-color: #DDDDDD;
+}
+
+article ul { 
+	list-style-type: none;
+	padding: 0;
+	margin: 0px  0px 0px 10px;
+	
+}
+
+article li:before {
+    content: "➤";
+    padding-right: 0.2em;
+    color: #7777AA;
+}
+
+article h3 {	
+	padding: 5px;
+	margin: 0 0 .2em 0;
+	font-weight: bold;
+	font-size: 120%;
+	background-color: #222222;
+	border-bottom: solid #4754ff 0.1em;
+	color: #DDDDDD;
+}
+
+a:link {color: #111111;}
+a:visited {color: #4754ff;}
+a:hover {color: #ff9a00;}
+a:active {color: #FFFFAA;}
+
+footer {
+	clear: both; 
+	color: #AAAAAA;
+	text-align: right;
+
+	margin: 0.5em auto;
+	border: .2em solid #444444;
+	border-radius: 0.5em;
+	overflow: hidden;
+	width: 95%;
+	min-width: 22em;
+	background-color: #222222;
+
+}
+
+/* -- For DripIcon Original Set Only
+.weather path {
+	fill: white;
+	stroke: black;
+}
+*/
+
+.icon {
+	width: 1.25em;
+	height: 1.25em;
+}
+
+.weather svg {
+	vertical-align: text-bottom;
+}
+
+.weather path {
+	stroke: #808080;
+	stroke-width: 3;
+	
+}
+
+.weather path.sun {
+	fill:#DDCC22;
+}
+
+.weather path.cloud {
+	fill: #BBBBBB;
+}
+
+.weather path.water {
+	fill: #8888FF;
+}
+
+.weather .current {
+	font-size:2.2em;
+	padding: 0 5px;
+	color: #252525;
+	display: inline-block;
+}
+
+.weather p {
+	font-weight: bold;
+	font-size: 80%;
+	color:#FF4400;
+	padding: 0 0 0 2px;	
+}
+
+.weather table, .weather tbody, .weather tr, .weather td {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	float: left;
+	border-collapse: collapse;
+	color: #252525;
+	font-size: 1.1em;
+
+
+}
+
+.weather table, .weather tr, .weather tbody{
+	width: 100%;
+	padding: 0 5px;
+}
+
+.weather tr {
+	padding: 2px 0 0 0;
+}
+
+.weather tr:nth-child(odd) {
+	background: #D0D0D0;
+}
+
+.weather td:nth-child(1){
+	width: 25%;
+	padding-left: 2px;
+}
+
+.weather td:nth-child(2){
+	width: 20%;
+	text-align: center;
+}
+
+.weather td:nth-child(3){
+	float: right;
+	padding-right: 2px;
+}
+
+.antispam {
+	display:none;
+}
+
+label {
+	padding-left: 2.5%;	
+}
+
+input, textarea {
+	background-color: #BDBDBD;
+	color: #000000;
+	font-size: 90%;
+	width: 95%;
+	padding-left: 0.5em;
+	margin: 0.1em 2.5%;
+}
+
+@media (orientation: portrait) and (max-width: 1081px) {
+
+body, td {
+	font-size: 170%
+}
+
+svg.icon, img.icon {
+	width: 1.75em;
+	height: 1.75em;
+	text-align: top;
+}
+
+header {
+	width: 99%;
+}
+	
+header div svg {
+	opacity: 0.2;
+}
+
+nav {
+	left: 0;
+	width: auto;
+}
+
+div.colsmall { 
+	width: 99%;
+}
+
+div.colbig { 
+	width: 99%;
+}
+
+}
+
+
+</style>
+
+<meta name="description" content="Introducing ZFire CMS, a secure and fast web content engine!">
+
+<script>
+function refreshContent() {
+	// Dirty little AJAX call to kick the psuedo-cron process and then schedule reload of this page.
+	var xmlhttp;
+	xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4) {
+			if (xmlhttp.status == 200) {
+				if (isNaN(xmlhttp.responseText)) {
+				setTimeout('refreshContent();', 300000);
+				} else {
+					var cooldowntime = Number(xmlhttp.responseText);
+					if (cooldowntime == 0) {
+						window.location.reload(true);
+					} else {
+						setTimeout('refreshContent();', cooldowntime + 5000);
+					}				
+				}
+			} else {
+			setTimeout('refreshContent();', 30000);
+			}
+		}
+	};
+	xmlhttp.open('GET', 'zcms_regen.php', true);
+	xmlhttp.send();
+}
+
+window.onload = setTimeout('refreshContent();',60000);
+</script>
+
+</head>
+
+<body>
+
+<header>
+<div style="width:75px;height:75px;padding:0;margin:0.5em;position:relative;display: inline-block;float:left;">
+<a href="/" style="width:75px;height:75px;display:inline-block;">
+<svg viewbox='31 44 13 13' width='100%' height='100%' class='icon' style='width:100%;height:100%;opacity:0.95;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 41.592274,50.110198 c 0,0.60175 0,1.22092 0,1.759582 0.715224,-0.0038 1.457883,-0.0021 2.076357,-0.0021 v -0.56224 h -0.980302 l 1.19321,-1.195276 z m 0.531233,0.531233 h 0.478523 l -0.478523,0.478525 z" id="path4915" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccc"/>
+    <path inkscape:connector-curvature="0" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#4754ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79692507;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 31.923539,44.684687 c 0.97444,1.463572 1.952059,2.924763 2.926437,4.388364 l 0.127125,0.192754 h 0.957564 l -0.479557,-0.728123 -0.0036,0.0031 c -0.679503,-1.020075 -1.359646,-2.039512 -2.03967,-3.059245 h 6.4301 l -7.971089,10.626744 h 9.51208 C 40.34768,54.557366 39.524373,53.379954 38.513313,51.874943 h -0.909505 c 0.762891,1.145916 1.527053,2.291173 2.290815,3.436483 h -6.4301 l 7.971092,-10.626744 z" id="path3716-9"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 36.369015,45.721577 c 0,1.463542 0,2.927085 0,4.390627 h -1.197266 v 0.568359 h 1.197266 v 3.851563 h 0.56836 v -3.851563 h 1.197265 v -0.568361 h -1.197265 v -3.015625 l 0.982421,0.978516 0.339844,-0.449219 z" id="path3720-4" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 38.508647,50.106165 c 0,0.577665 0,1.178137 0,1.765624 h 0.570313 v -1.765625 z" id="path3726-2" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 39.456235,50.106165 c 0,0.578977 0,1.177282 0,1.765624 h 0.568359 v -1.195313 h 1.197266 v -0.570312 z" id="path3728-8" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc"/>
+  </g>
+</svg></a>
+</div>
+
+	<nav>
+				<ul>
+			<li><a href='index.html'>Intro</a></li>
+			<li><a href='demos.html'>Demos</a></li>
+			<li><a href='guide.html'>Get it!</a></li>
+		</ul>
+
+	</nav>
+	<H2>Demos</H2>
+
+		<p style="width:99%;padding-top:0;">Zfire CMS: A new way to deliver dynamic content securely and with great speed.
+	
+		<span style="float:right;color:#AAAAAA;margin-right: 0.5em;">
+		<time>
+			Generated: Mon, Jul 24 2017 8:00 PM
+		</time>
+		</span>
+	</p>
+	
+</header>
+<main>
+
+		<section>
+
+	
+	<div class="column col3">
+		<article>
+	<h3><svg viewbox='31 44 13 13' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 41.592274,50.110198 c 0,0.60175 0,1.22092 0,1.759582 0.715224,-0.0038 1.457883,-0.0021 2.076357,-0.0021 v -0.56224 h -0.980302 l 1.19321,-1.195276 z m 0.531233,0.531233 h 0.478523 l -0.478523,0.478525 z" id="path4915" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccc"/>
+    <path inkscape:connector-curvature="0" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#4754ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79692507;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 31.923539,44.684687 c 0.97444,1.463572 1.952059,2.924763 2.926437,4.388364 l 0.127125,0.192754 h 0.957564 l -0.479557,-0.728123 -0.0036,0.0031 c -0.679503,-1.020075 -1.359646,-2.039512 -2.03967,-3.059245 h 6.4301 l -7.971089,10.626744 h 9.51208 C 40.34768,54.557366 39.524373,53.379954 38.513313,51.874943 h -0.909505 c 0.762891,1.145916 1.527053,2.291173 2.290815,3.436483 h -6.4301 l 7.971092,-10.626744 z" id="path3716-9"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 36.369015,45.721577 c 0,1.463542 0,2.927085 0,4.390627 h -1.197266 v 0.568359 h 1.197266 v 3.851563 h 0.56836 v -3.851563 h 1.197265 v -0.568361 h -1.197265 v -3.015625 l 0.982421,0.978516 0.339844,-0.449219 z" id="path3720-4" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 38.508647,50.106165 c 0,0.577665 0,1.178137 0,1.765624 h 0.570313 v -1.765625 z" id="path3726-2" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 39.456235,50.106165 c 0,0.578977 0,1.177282 0,1.765624 h 0.568359 v -1.195313 h 1.197266 v -0.570312 z" id="path3728-8" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc"/>
+  </g>
+</svg><span>Demonstrations</span> <span style='float:right;' title='Static'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Static Content">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <circle cx="50" cy="50" r="10" stroke="#9999FF" stroke-width="1" fill="#9999FF"/>
+	</g>
+</svg></span></h3>
+	<div>
+ 		<p>This section is  a static content box with HTML that was authored by the site owner.  Static content like this is indicated by the blue dot icon in the right of the title bar.</p>
+		<p>The other sections demonstrate dynamic content options available with Zfire CMS.  The right side icons in their title bars indicate if a refresh was missed once or more than once.</p>
+		<p>Any PHP code or HTML code that a site owner wishes to include can be made into a content module, and a library of built-in functions allow for generating fresh content and links for your site, on an ongoing basis.</p>
+	</div>
+</article>	</div>
+	
+	<div class="column col3">
+		<article>
+	<h3><span><svg viewbox="0 0 64 64" width="1.25em" height="1.25em" class="icon" style="width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g transform="translate(0.00630876,-0.00301984)">
+<path fill="#f7931a" d="m63.033,39.744c-4.274,17.143-21.637,27.576-38.782,23.301-17.138-4.274-27.571-21.638-23.295-38.78,4.272-17.145,21.635-27.579,38.775-23.305,17.144,4.274,27.576,21.64,23.302,38.784z"/>
+<path fill="#FFF" d="m46.103,27.444c0.637-4.258-2.605-6.547-7.038-8.074l1.438-5.768-3.511-0.875-1.4,5.616c-0.923-0.23-1.871-0.447-2.813-0.662l1.41-5.653-3.509-0.875-1.439,5.766c-0.764-0.174-1.514-0.346-2.242-0.527l0.004-0.018-4.842-1.209-0.934,3.75s2.605,0.597,2.55,0.634c1.422,0.355,1.679,1.296,1.636,2.042l-1.638,6.571c0.098,0.025,0.225,0.061,0.365,0.117-0.117-0.029-0.242-0.061-0.371-0.092l-2.296,9.205c-0.174,0.432-0.615,1.08-1.609,0.834,0.035,0.051-2.552-0.637-2.552-0.637l-1.743,4.019,4.569,1.139c0.85,0.213,1.683,0.436,2.503,0.646l-1.453,5.834,3.507,0.875,1.439-5.772c0.958,0.26,1.888,0.5,2.798,0.726l-1.434,5.745,3.511,0.875,1.453-5.823c5.987,1.133,10.489,0.676,12.384-4.739,1.527-4.36-0.076-6.875-3.226-8.515,2.294-0.529,4.022-2.038,4.483-5.155zm-8.022,11.249c-1.085,4.36-8.426,2.003-10.806,1.412l1.928-7.729c2.38,0.594,10.012,1.77,8.878,6.317zm1.086-11.312c-0.99,3.966-7.1,1.951-9.082,1.457l1.748-7.01c1.982,0.494,8.365,1.416,7.334,5.553z"/>
+</g>
+</svg><span>Bitcoin: </span><span style="color: #55FF55; font-weight: bold;">$2773</span></span> <span style='float:right;' title='Fresh'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Fresh Content">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <polyline points="50,25 50,50" style="fill:none;stroke:#99FF99;stroke-width:8;stroke-linecap:round;"/>
+	</g>
+</svg></span></h3>
+	
+</article>		<article>
+	<h3><span><img class="icon" style="vertical-align:text-bottom;padding:0 4px 0 0;" src="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEAGABoAwAAFgAAACgAAAAQAAAAIAAAAAEAGAAAAAAAAAAAAMQOAADEDgAAAAAAAAAAAAAAAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP////////////////////8AAP8AAP////////////////////8AAP8AAP8AAP8AAP////////////////////8AAP8AAP////////////////////8AAP8AAP8AAP8AAP////////8AAP////////8AAP8AAP////////8AAP////////8AAP8AAP8AAP8AAP////////8AAP////////8AAP8AAP////////8AAP////////8AAP8AAP8AAP8AAP////////8AAP////////8AAP8AAP////////8AAP////////8AAP8AAP8AAP8AAP////////////////////8AAP8AAP////////////////////8AAP8AAP8AAP8AAP////////////////////8AAP8AAP////////////////////8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP////////8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>Boing Boing</span> <span style='float:right;' title='Fresh'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Fresh Content">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <polyline points="50,25 50,50" style="fill:none;stroke:#99FF99;stroke-width:8;stroke-linecap:round;"/>
+	</g>
+</svg></span></h3>
+	<div><ul><li title="Trump relitigated the 2016 election, boasted about his inauguration crowds, and told other inappropriate fabulisms to a crowd of children at the 2017 Boy Scout Jamboree today, because nothing matters anymore.  &#x2026;"><a href="http://boingboing.net/2017/07/24/creepy-trump-gave-a-super-weir.html">Trump gave a weird speech to thousands of Boy Scouts in which he relitigated election &amp; crowd sizes (again)</a></li><li title="U.S. Defense Secretary Jim Mattis criticized officials at the Pentagon for spending $28 million on forest camouflage-patterned uniforms for Afghan National Army soldiers. Only 2.1% of Afghanistan is covered by forests. (more&#x2026;)"><a href="http://boingboing.net/2017/07/24/oops-camo.html">SecDef Mattis upset at Pentagon wasting $28 million on Afghan uniforms with wrong camo pattern</a></li><li title="These videos of a guy in Istanbul playing the piano with his kitty cat are so sweet and genuine. I can't get enough of them. His name is Sarper Duman. Play him off, keyboard cat.  (more&#x2026;)"><a href="http://boingboing.net/2017/07/24/piano-cat.html">Cat enjoys relaxing and playing piano with owner</a></li><li title="Studio audiences continue to be thrilled by the giant clown with the golden voice."><a href="http://boingboing.net/2017/07/24/another-puddles-pity-party-app.html">Another Puddles Pity Party appearance on 'America's Got Talent'</a></li><li title="Secretary of State Rex Tillerson, the former CEO Exxon-Mobil, is thinking about quitting his job because he is fed up with Trump, according to CNN.&#x2026;"><a href="http://boingboing.net/2017/07/24/tillerson-may-quit-soon-frust.html">Tillerson may quit soon, frustrated with Trump</a></li></ul></div>
+</article>		<article>
+	<h3><span><img class="icon" style="vertical-align:text-bottom;padding:0 4px 0 0;" src="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA////AH9/fwDAwMAAREREACIiIgCfn58A4uLiAGNjYwDR0dEAMzMzABAQEACPj48AsbGxAFNTUwDx8fEAcHBwABoaGgAqKioAyMjIAIeHhwD4+PgACQkJANvb2wA6OjoAubm5AEtLSwBcXFwAmJiYAHd3dwDo6OgAaGhoAAUFBQAUFBQA1dXVAK2trQBPT08AlJSUAHt7ewD8/PwA9fX1AOXl5QAlJSUALS0tADY2NgDLy8sAvb29AEdHRwBZWVkAm5ubAGtrawBzc3MAjIyMAAICAgALCwsAJycnAMbGxgDCwsIAODg4AFVVVQChoaEAnZ2dAJGRkQCJiYkAdXV1AHl5eQB9fX0A/f39APf39wAPDw8A8PDwABMTEwDj4+MAIyMjANzc3AAoKCgAKSkpANLS0gArKysAysrKADQ0NADHx8cANTU1AL6+vgC4uLgAsrKyAE5OTgCurq4AVFRUAJ6engCQkJAAb29vAHR0dAB4eHgAfn5+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACABSVSsAAAAAAAAASw0sAFwAAANRAAAAAAAAAC4TAABCWlsBHkVMGi9WChYHATMMW0ABAQEMWQEBAQYcAQEBXlsABSRNPQFDVycPMSkOSQBbAAAAIQlIAVQBSA0RAAAAWwAAABItIDQBEAsDAAAAAFsAAAAqKFgmARszFzUAAABbAAAAAE8BAQEBAQwAAAAAWwAAADo+KAEBAUolBAAAAFsANztERgIZIjxBARUwSwBbXQEBAU9HAAAAITkBAQFeQj8fJyk2AAAAAAAWB0MyFDMAAFM4AAAAAAAAAFMTAAAIAFBVTgAAAAAAAAA3VRgAI1sdW1tbW1tbW1tbW1tBWwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="/>Hack-a-Day</span> <span style='float:right;' title='Fresh'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Fresh Content">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <polyline points="50,25 50,50" style="fill:none;stroke:#99FF99;stroke-width:8;stroke-linecap:round;"/>
+	</g>
+</svg></span></h3>
+	<div><ul><li title="The image shown is the mineral Hackmanite, which fluoresces under ultraviolet lighting. However, not all UV is created equal, and that makes a difference if you&#x2019;re into UV imaging. The image for this article is from [David Prutchi] and shows the striking results of using different wavelengths of UV. [David] goes into detail on how to make your own DIY Long, Medium, and Short-wave UV&#x2026;"><a href="http://hackaday.com/2017/07/24/diy-illuminator-for-uv-fluorescence-photography/">DIY Illuminator for UV Fluorescence Photography</a></li><li title="How many times are you out on vacation and neglect to take pictures to document it all for the folks back at home? Or maybe you forgot just exactly where that awesome waterfall was.&#xA0;[Mark Williams] has made a Raspberry Pi Zero enabled cap that can take photos and geotag them with the location as well as the attitude of the camera.&#x2026;"><a href="http://hackaday.com/2017/07/24/the-perfect-tourist-techno-cap/">The Perfect Tourist Techno-Cap</a></li><li title="The ESP8266 is a remarkable piece of hardware. What we originally thought &#x2014; and what was originally marketed as &#x2014; a simple UART to WiFi bridge with Hayes modem commands has turned into one of the best embedded platforms around. It&#x2019;s a powerful little microcontroller, it has WiFi, and it can send raw frames. That last bit is awesome, because it allows for some mischief or mirth&#x2026;"><a href="http://hackaday.com/2017/07/24/hackaday-prize-entry-dont-build-this/">Hackaday Prize Entry: Don’t Build This</a></li><li title="A group of embedded developers from Sioux Embedded Systems in Eindhoven, the Netherlands, wanted to&#xA0;get experience working on Microsoft .Net. To make it fun they made it their project to produce a LEGO train with visitors at LEGO World, the official LEGO convention in the Netherlands. The team developed an application&#xA0;in C# to fully automate the train, with Mindstorms NXT and EV3 bricks as well&#x2026;"><a href="http://hackaday.com/2017/07/24/monster-mindstorms-delta-bot-delicately-picks-candy/">Monster Mindstorms Delta Bot Delicately Picks Candy</a></li><li title="This morning marks a new challenge in the Hackaday Prize: we want to see what you can do with Assistive Technology. Twenty entries will win $1000 each, becoming part of the final round for a chance at the top prizes ranging from $5,000 to $50,000.&#x2026;"><a href="http://hackaday.com/2017/07/24/hackadays-assistive-technology-challenge-begins-now/">Hackaday’s Assistive Technology Challenge Begins Now</a></li></ul></div>
+</article>	</div>
+
+	
+	<div class="column col3">
+		<div>
+		</div><article>
+	<h3><span><a style="text-decoration:none;color:#BBBBBB;" href="http://www.wunderground.com/weather-forecast/TN/Memphis?apiref=7eca00ae6a4ab627"><img class="icon" style="vertical-align:text-bottom;padding:0 4px 0 0;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAA3NCSVQICAjb4U/gAAACCElEQVQokY3SP2hTURQG8O/c+97NS2NijYmWSkJpHTooRujkUChIoCFqxaGoo4OitZmcVBDEwdUuDm5SRFAKbiIkKKEOulj8U0FpmprWpqaNSZt389677zrEuemZzvD9lvMdSg4MoevIJqxwZ2Xd0zt1dT6H7c29AV9hf8yduKkTw1DeHkCr7k3kyN5W2WvYqXUFGrKuRtJwpEqNgXFovStwpJ++ikAQWoOYylyH09oVMI5aRZsC3NCmoFoFjPNIb7SptGBEgKthawgCAF+j4XKj8t1o2zCFUZzjr2YQifOeA9Ebg1Z+S3FgMMQyfebrmhcEQWDqtLnlWOX3H0Lzz9jXgspOs6VP/GGqfzrZkwjQ7LKTPxW5EBMrtlp0/c+58Pgov3Im8KXEF38pdvG2O3mLuGD5v57j63RcZBMibrCGpy/1B+4mLf6WV4oET18eNf/UFcwAXAlusJdrbtnxBTAzHJJKA0jtM84dDsDEu7oHIqXU/wY7hwibeLHa5kRBAiMsND0ihBh+u36h6oB8PzoEbOrYEQ8ER7JeTvdKUhEMwseG92BJWoxMorn19pM3HiSdPfrj+NP51ROZY7LUV3zECDCB52syZLLHK7Kw4X6zlQ19Z7kdDdL4/VZpXSwMTJblyZHZsZ8bQeq8d1VpqXDIIIuh7GpoJAQRID1Uaxo2YOmDURYS+AeZk+FirFm8fQAAAABJRU5ErkJggg=="/>Memphis Weather</a></span> <span style='float:right;' title='Stale'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Content not updating">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <polyline points="50,75 50,50" style="fill:none;stroke:#FF9999;stroke-width:8;stroke-linecap:round;"/>
+	</g>
+</svg></span></h3>
+	<div class="weather"><a style="text-decoration:none;color:#BBBBBB;" href="http://www.wunderground.com/weather-forecast/TN/Memphis?apiref=7eca00ae6a4ab627">				<span class="current" title="Partly Cloudy">
+<svg viewbox="0 0 91 91" width="1.7em" height="1.7em" class="icon" style="width:1.7em;height:1.7em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g>
+	<path class="cloud" d="M51.5,48.3h-1.1c-0.4-1.6-1-3.4-2-5.3c-3.3-6.2-9.2-9.6-16.5-9.6c-7.4,0-13.3,3.4-16.5,9.6c-1,2-1.6,4-2,5.6   C5.6,50,0.2,56.2,0.2,64.3C0.2,72.4,6,78.8,14,80.1c0.4,0.1,0.9,0.2,1.3,0.2h36.2c9.5,0,16.7-6.9,16.7-16   C68.2,55,61.2,48.3,51.5,48.3z M51.5,72.3H16.9c-6,0-8.7-4.1-8.7-8c0-4.8,3.5-8,8.7-8c2.1,0,3.9-1.7,4-3.9c0,0,0.1-3.1,1.7-6   c1.8-3.4,4.9-5.1,9.2-5.1c4.4,0,7.5,1.7,9.4,5.1c1.6,2.9,1.8,6,1.8,6c0.1,2.1,1.9,3.8,4,3.8h4.5c5.2,0,8.7,3.2,8.7,8   C60.2,68.1,57.5,72.3,51.5,72.3z"/>
+	<path class="sun" d="M74.3,42.8c0-8.6-7-15.6-15.6-15.6c-3.1,0-6.2,0.9-8.7,2.7c-1.4,0.9-1.7,2.8-0.8,4.2c0.9,1.4,2.8,1.7,4.2,0.8   c1.6-1.1,3.5-1.6,5.4-1.6c5.3,0,9.6,4.3,9.6,9.6c0,1.6-0.4,3.1-1.1,4.4c-0.8,1.5-0.2,3.3,1.3,4c0.4,0.2,0.9,0.3,1.4,0.3   c1.1,0,2.1-0.6,2.7-1.6C73.7,47.8,74.3,45.3,74.3,42.8z"/>
+	<path class="sun" d="M58.7,22.4c1.7,0,3-1.3,3-3v-5.7c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3v5.7C55.7,21.1,57.1,22.4,58.7,22.4z"/>
+	<path class="sun" d="M87.8,39.8H82c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3h5.7c1.7,0,3-1.3,3-3C90.8,41.1,89.4,39.8,87.8,39.8z"/>
+	<path class="sun" d="M75.2,29.3c0.8,0,1.5-0.3,2.1-0.9l4-4c1.2-1.2,1.2-3.1,0-4.2c-1.2-1.2-3.1-1.2-4.2,0l-4,4c-1.2,1.2-1.2,3.1,0,4.2   C73.7,29,74.4,29.3,75.2,29.3z"/>
+	<path class="sun" d="M77.3,57.2c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2l4,4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9   c1.2-1.2,1.2-3.1,0-4.2L77.3,57.2z"/>
+	<path class="sun" d="M40.1,28.4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2l-4-4c-1.2-1.2-3.1-1.2-4.2,0   c-1.2,1.2-1.2,3.1,0,4.2L40.1,28.4z"/>
+</g>
+</svg>				69.1°F
+</span>
+				<table><tbody>
+				<tr title="Partly Cloudy"><td>Sat:</td><td><svg viewbox="0 0 91 91" width="1.25em" height="1.25em" class="icon" style="width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g>
+	<path class="cloud" d="M51.5,48.3h-1.1c-0.4-1.6-1-3.4-2-5.3c-3.3-6.2-9.2-9.6-16.5-9.6c-7.4,0-13.3,3.4-16.5,9.6c-1,2-1.6,4-2,5.6   C5.6,50,0.2,56.2,0.2,64.3C0.2,72.4,6,78.8,14,80.1c0.4,0.1,0.9,0.2,1.3,0.2h36.2c9.5,0,16.7-6.9,16.7-16   C68.2,55,61.2,48.3,51.5,48.3z M51.5,72.3H16.9c-6,0-8.7-4.1-8.7-8c0-4.8,3.5-8,8.7-8c2.1,0,3.9-1.7,4-3.9c0,0,0.1-3.1,1.7-6   c1.8-3.4,4.9-5.1,9.2-5.1c4.4,0,7.5,1.7,9.4,5.1c1.6,2.9,1.8,6,1.8,6c0.1,2.1,1.9,3.8,4,3.8h4.5c5.2,0,8.7,3.2,8.7,8   C60.2,68.1,57.5,72.3,51.5,72.3z"/>
+	<path class="sun" d="M74.3,42.8c0-8.6-7-15.6-15.6-15.6c-3.1,0-6.2,0.9-8.7,2.7c-1.4,0.9-1.7,2.8-0.8,4.2c0.9,1.4,2.8,1.7,4.2,0.8   c1.6-1.1,3.5-1.6,5.4-1.6c5.3,0,9.6,4.3,9.6,9.6c0,1.6-0.4,3.1-1.1,4.4c-0.8,1.5-0.2,3.3,1.3,4c0.4,0.2,0.9,0.3,1.4,0.3   c1.1,0,2.1-0.6,2.7-1.6C73.7,47.8,74.3,45.3,74.3,42.8z"/>
+	<path class="sun" d="M58.7,22.4c1.7,0,3-1.3,3-3v-5.7c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3v5.7C55.7,21.1,57.1,22.4,58.7,22.4z"/>
+	<path class="sun" d="M87.8,39.8H82c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3h5.7c1.7,0,3-1.3,3-3C90.8,41.1,89.4,39.8,87.8,39.8z"/>
+	<path class="sun" d="M75.2,29.3c0.8,0,1.5-0.3,2.1-0.9l4-4c1.2-1.2,1.2-3.1,0-4.2c-1.2-1.2-3.1-1.2-4.2,0l-4,4c-1.2,1.2-1.2,3.1,0,4.2   C73.7,29,74.4,29.3,75.2,29.3z"/>
+	<path class="sun" d="M77.3,57.2c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2l4,4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9   c1.2-1.2,1.2-3.1,0-4.2L77.3,57.2z"/>
+	<path class="sun" d="M40.1,28.4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2l-4-4c-1.2-1.2-3.1-1.2-4.2,0   c-1.2,1.2-1.2,3.1,0,4.2L40.1,28.4z"/>
+</g>
+</svg></td><td>71°F / 54°F</td></tr>
+				<tr title="Thunderstorm"><td>Sun:</td><td><svg viewbox="0 0 91 91" width="1.25em" height="1.25em" class="icon" style="width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g>
+	<path class="cloud" d="M62.8,29.5h-1.1c-0.4-1.6-1-3.4-2-5.3c-3.3-6.2-9.2-9.6-16.5-9.6c-7.4,0-13.3,3.4-16.5,9.6c-1,2-1.6,4-2,5.6   c-7.8,1.4-13.2,7.6-13.2,15.7c0,5.2,2.5,10,6.6,12.9c1.8,1.3,4.3,0.9,5.6-0.9c1.3-1.8,0.9-4.3-0.9-5.6c-2-1.4-3.2-3.8-3.2-6.4   c0-4.8,3.5-8,8.7-8c2.2,0,3.9-1.7,4-3.9c0-1.1,0.6-11.1,10.9-11.1c4.4,0,7.5,1.7,9.4,5.1c1.6,2.9,1.8,6,1.8,6   c0.1,2.1,1.9,3.8,4,3.8h4.5c5.2,0,8.7,3.2,8.7,8c0,4-2.6,7-6.5,7.8c-2.2,0.4-3.6,2.5-3.2,4.7c0.4,1.9,2,3.2,3.9,3.2   c0.3,0,0.5,0,0.8-0.1c7.7-1.5,13-7.9,13-15.7C79.5,36.3,72.5,29.5,62.8,29.5z"/>
+	<path class="water" d="M34.7,45.6c-1.9-0.5-3.8,0.6-4.3,2.5l-1.2,4.4c-0.5,1.9,0.6,3.8,2.5,4.3c0.3,0.1,0.6,0.1,0.9,0.1c1.5,0,3-1,3.4-2.6   l1.2-4.4C37.7,48.1,36.6,46.1,34.7,45.6z"/>
+	<path class="water" d="M30.4,61.9c-1.9-0.5-3.8,0.6-4.3,2.5l-1.2,4.4c-0.5,1.9,0.6,3.8,2.5,4.3c0.3,0.1,0.6,0.1,0.9,0.1c1.5,0,3-1,3.4-2.6   l1.2-4.4C33.3,64.3,32.2,62.4,30.4,61.9z"/>
+	<path class="sun" d="M57.1,54.6h-4.4l5.5-7.7c0.3-0.5,0.4-1.1,0.1-1.6c-0.3-0.5-0.8-0.8-1.3-0.8H46c-0.6,0-1.2,0.4-1.4,1l-6.1,15.8   c-0.2,0.5-0.1,1,0.2,1.4c0.3,0.4,0.7,0.6,1.2,0.6h0l3.2,0l-4.2,11c-0.3,0.7,0,1.4,0.6,1.8c0.2,0.1,0.5,0.2,0.8,0.2   c0.4,0,0.8-0.2,1.1-0.5l16.6-18.8c0.4-0.4,0.5-1.1,0.2-1.6C58.2,55,57.7,54.6,57.1,54.6z"/>
+</g>
+</svg></td><td>60°F / 40°F</td></tr>
+				<tr title="Partly Cloudy"><td>Mon:</td><td><svg viewbox="0 0 91 91" width="1.25em" height="1.25em" class="icon" style="width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g>
+	<path class="cloud" d="M51.5,48.3h-1.1c-0.4-1.6-1-3.4-2-5.3c-3.3-6.2-9.2-9.6-16.5-9.6c-7.4,0-13.3,3.4-16.5,9.6c-1,2-1.6,4-2,5.6   C5.6,50,0.2,56.2,0.2,64.3C0.2,72.4,6,78.8,14,80.1c0.4,0.1,0.9,0.2,1.3,0.2h36.2c9.5,0,16.7-6.9,16.7-16   C68.2,55,61.2,48.3,51.5,48.3z M51.5,72.3H16.9c-6,0-8.7-4.1-8.7-8c0-4.8,3.5-8,8.7-8c2.1,0,3.9-1.7,4-3.9c0,0,0.1-3.1,1.7-6   c1.8-3.4,4.9-5.1,9.2-5.1c4.4,0,7.5,1.7,9.4,5.1c1.6,2.9,1.8,6,1.8,6c0.1,2.1,1.9,3.8,4,3.8h4.5c5.2,0,8.7,3.2,8.7,8   C60.2,68.1,57.5,72.3,51.5,72.3z"/>
+	<path class="sun" d="M74.3,42.8c0-8.6-7-15.6-15.6-15.6c-3.1,0-6.2,0.9-8.7,2.7c-1.4,0.9-1.7,2.8-0.8,4.2c0.9,1.4,2.8,1.7,4.2,0.8   c1.6-1.1,3.5-1.6,5.4-1.6c5.3,0,9.6,4.3,9.6,9.6c0,1.6-0.4,3.1-1.1,4.4c-0.8,1.5-0.2,3.3,1.3,4c0.4,0.2,0.9,0.3,1.4,0.3   c1.1,0,2.1-0.6,2.7-1.6C73.7,47.8,74.3,45.3,74.3,42.8z"/>
+	<path class="sun" d="M58.7,22.4c1.7,0,3-1.3,3-3v-5.7c0-1.7-1.3-3-3-3c-1.7,0-3,1.3-3,3v5.7C55.7,21.1,57.1,22.4,58.7,22.4z"/>
+	<path class="sun" d="M87.8,39.8H82c-1.7,0-3,1.3-3,3c0,1.7,1.3,3,3,3h5.7c1.7,0,3-1.3,3-3C90.8,41.1,89.4,39.8,87.8,39.8z"/>
+	<path class="sun" d="M75.2,29.3c0.8,0,1.5-0.3,2.1-0.9l4-4c1.2-1.2,1.2-3.1,0-4.2c-1.2-1.2-3.1-1.2-4.2,0l-4,4c-1.2,1.2-1.2,3.1,0,4.2   C73.7,29,74.4,29.3,75.2,29.3z"/>
+	<path class="sun" d="M77.3,57.2c-1.2-1.2-3.1-1.2-4.2,0c-1.2,1.2-1.2,3.1,0,4.2l4,4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9   c1.2-1.2,1.2-3.1,0-4.2L77.3,57.2z"/>
+	<path class="sun" d="M40.1,28.4c0.6,0.6,1.4,0.9,2.1,0.9c0.8,0,1.5-0.3,2.1-0.9c1.2-1.2,1.2-3.1,0-4.2l-4-4c-1.2-1.2-3.1-1.2-4.2,0   c-1.2,1.2-1.2,3.1,0,4.2L40.1,28.4z"/>
+</g>
+</svg></td><td>52°F / 37°F</td></tr>
+				<tr title="Clear"><td>Tue:</td><td><svg viewbox="0 0 91 91" width="1.25em" height="1.25em" class="icon" style="width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;">
+<g>
+	<path class="sun" d="M45.5,23.5c-12.1,0-22,9.9-22,22c0,12.1,9.9,22,22,22c12.1,0,22-9.9,22-22C67.5,33.4,57.6,23.5,45.5,23.5z M45.5,59.5   c-7.7,0-14-6.3-14-14c0-7.7,6.3-14,14-14c7.7,0,14,6.3,14,14C59.5,53.2,53.2,59.5,45.5,59.5z"/>
+	<path class="sun" d="M45.5,16.2c2.2,0,4-1.8,4-4V4.1c0-2.2-1.8-4-4-4c-2.2,0-4,1.8-4,4v8.1C41.5,14.5,43.3,16.2,45.5,16.2z"/>
+	<path class="sun" d="M86.9,41.5h-8.1c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4h8.1c2.2,0,4-1.8,4-4C90.9,43.3,89.1,41.5,86.9,41.5z"/>
+	<path class="sun" d="M45.5,74.8c-2.2,0-4,1.8-4,4v8.1c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4v-8.1C49.5,76.5,47.7,74.8,45.5,74.8z"/>
+	<path class="sun" d="M16.2,45.5c0-2.2-1.8-4-4-4H4.1c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4h8.1C14.5,49.5,16.2,47.7,16.2,45.5z"/>
+	<path class="sun" d="M69,26c1,0,2-0.4,2.8-1.2l5.8-5.8c1.6-1.6,1.6-4.1,0-5.7c-1.6-1.6-4.1-1.6-5.7,0l-5.8,5.8c-1.6,1.6-1.6,4.1,0,5.7   C67,25.6,68,26,69,26z"/>
+	<path class="sun" d="M71.8,66.2c-1.6-1.6-4.1-1.6-5.7,0c-1.6,1.6-1.6,4.1,0,5.7l5.8,5.8c0.8,0.8,1.8,1.2,2.8,1.2c1,0,2-0.4,2.8-1.2   c1.6-1.6,1.6-4.1,0-5.7L71.8,66.2z"/>
+	<path class="sun" d="M19.2,66.2l-5.8,5.8c-1.6,1.6-1.6,4.1,0,5.7c0.8,0.8,1.8,1.2,2.8,1.2c1,0,2-0.4,2.8-1.2l5.8-5.8c1.6-1.6,1.6-4.1,0-5.7   C23.3,64.6,20.7,64.6,19.2,66.2z"/>
+	<path class="sun" d="M19.2,24.8C19.9,25.6,21,26,22,26c1,0,2-0.4,2.8-1.2c1.6-1.6,1.6-4.1,0-5.7l-5.8-5.8c-1.6-1.6-4.1-1.6-5.7,0   c-1.6,1.6-1.6,4.1,0,5.7L19.2,24.8z"/>
+</g>
+</svg></td><td>62°F / 52°F</td></tr>
+				</tbody></table>
+</a></div>
+</article>		<article>
+	<h3><svg viewbox='31 44 13 13' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:1;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1">
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 41.592274,50.110198 c 0,0.60175 0,1.22092 0,1.759582 0.715224,-0.0038 1.457883,-0.0021 2.076357,-0.0021 v -0.56224 h -0.980302 l 1.19321,-1.195276 z m 0.531233,0.531233 h 0.478523 l -0.478523,0.478525 z" id="path4915" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccc"/>
+    <path inkscape:connector-curvature="0" style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#4754ff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.79692507;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 31.923539,44.684687 c 0.97444,1.463572 1.952059,2.924763 2.926437,4.388364 l 0.127125,0.192754 h 0.957564 l -0.479557,-0.728123 -0.0036,0.0031 c -0.679503,-1.020075 -1.359646,-2.039512 -2.03967,-3.059245 h 6.4301 l -7.971089,10.626744 h 9.51208 C 40.34768,54.557366 39.524373,53.379954 38.513313,51.874943 h -0.909505 c 0.762891,1.145916 1.527053,2.291173 2.290815,3.436483 h -6.4301 l 7.971092,-10.626744 z" id="path3716-9"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 36.369015,45.721577 c 0,1.463542 0,2.927085 0,4.390627 h -1.197266 v 0.568359 h 1.197266 v 3.851563 h 0.56836 v -3.851563 h 1.197265 v -0.568361 h -1.197265 v -3.015625 l 0.982421,0.978516 0.339844,-0.449219 z" id="path3720-4" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccccccccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 38.508647,50.106165 c 0,0.577665 0,1.178137 0,1.765624 h 0.570313 v -1.765625 z" id="path3726-2" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccc"/>
+    <path style="color:#000000;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:#ff9a00;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.0396875;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" d="m 39.456235,50.106165 c 0,0.578977 0,1.177282 0,1.765624 h 0.568359 v -1.195313 h 1.197266 v -0.570312 z" id="path3728-8" inkscape:connector-curvature="0" sodipodi:nodetypes="ccccccc"/>
+  </g>
+</svg><span>Dynamic Content</span> <span style='float:right;' title='Static'><svg viewbox='0 0 100 100' width='1.25em' height='1.25em' class='icon' style='width:1.25em;height:1.25em;opacity:0.35;position:relative;z-index:200;left:0px;top:0px;pointer-events:none;vertical-align:text-bottom;padding:0 4px 0 0;'>
+<g title="Static Content">
+    <circle cx="50" cy="50" r="40" stroke="#999999" stroke-width="10" fill="none"/>
+    <circle cx="50" cy="50" r="10" stroke="#9999FF" stroke-width="1" fill="#9999FF"/>
+	</g>
+</svg></span></h3>
+	<div>
+ 		<p>Our Weather module requires a Weather Underground API key (not loaded on this site), so instead the last cached version of the content is shown.</p>
+		<p>The indicator icon in the upper right indicates that the content is out of date.</p>
+	</div>
+</article>	</div>
+	
+
+
+
+	</section>
+</main>
+
+<footer>
+<p><small><em>
+  Powered by Zfire CMS by Greg Zapf.
+  <br />
+  Weather icons by Amit Jakhu.  Weather data from WeatherUnderground.  Bitcoin Price snapshot from Coinbase.
+</em></small></p>
+
+
+</footer>
+
+</body>
+</html>
